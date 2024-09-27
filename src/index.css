@@ -1,0 +1,27 @@
+:root {
+  box-sizing: border-box;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --lcm-green: #48cfb4;
+  --lcm-pink: #f0e9ff;
+  --lcm-purple: #6946ce;
+  --lcm-beige: #ffe036;
+  --font-medium: 1.4rem;
+  --font-large: 1.8rem;
+  --font-small: 1.2rem;
+  --font-very-small: 1rem;
+  --font-very-very-small: 0.9rem;
+  background: var(--lcm-green);
+  font-family: "Overpass", sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
