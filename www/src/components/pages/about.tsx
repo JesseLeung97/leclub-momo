@@ -14,7 +14,6 @@ const Container = styled.div`
 
 const BioContainer = styled.div`
   width: 54%;
-  color: var(--lcm-purple);
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -26,7 +25,6 @@ const BioContainer = styled.div`
 
 const BioTitle = styled.h1`
   font-size: var(--font-large);
-  color: var(--lcm-purple);
   font-weight: bold;
   margin: 2rem 0;
 `
@@ -55,7 +53,6 @@ const ContactSection = styled.div`
 
 const SectionTitle = styled.h1`
   font-size: var(--font-medium);
-  color: var(--lcm-purple);
   font-weight: bold;
 `
 

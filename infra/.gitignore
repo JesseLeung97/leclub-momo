@@ -1,0 +1,11 @@
+# Terraform
+.terraform.lock.hcl
+.terraform
+terraform.tfvars
+tf.plan
+
+# Mac
+.DS_Store
+
+# Shop Lambda
+shop-lambda/node_modules

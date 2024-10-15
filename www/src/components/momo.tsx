@@ -7,7 +7,7 @@ const Square = styled.div`
   width: 224px;
   overflow: hidden;
   border-radius: 1000000px;
-  border: 10px solid var(--lcm-purple);
+  border: 10px solid var(--lcm-green-new);
   background: var(--lcm-pink);
 `
 

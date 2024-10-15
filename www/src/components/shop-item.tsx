@@ -1,11 +1,11 @@
 import styled from "styled-components"
 import { PageLink } from "./page-link"
 import { FC } from "preact/compat"
+import { ShopItemBg } from "./shop-item-bg"
 
 const Item = styled.div`
   position: relative;
   max-width: 360px;
-  overflow: hidden;
 `
 
 const Image = styled.img`
@@ -17,9 +17,9 @@ const Label = styled.div`
   left: 0;
 `
 
-const Type = styled.div`
+const Price = styled.div`
   font-size: var(--font-very-very-small);
-  color: var(--lcm-beige);
+  color: var(--lcm-green-new);
 `
 
 const Name = styled.div`
@@ -29,18 +29,19 @@ const Name = styled.div`
 
 export interface Props {
   name: string
-  type: string
+  price: string
   link: string
   imageLink: string
 }
 
-export const ShopItem: FC<Props> = ({ name, type, link, imageLink }) => {
+export const ShopItem: FC<Props> = ({ name, price, link, imageLink }) => {
   return (
     <Item>
+      <ShopItemBg />
       <PageLink to={link} external noPadding>
         <Image src={imageLink} />
         <Label>
-          <Type>{type}</Type>
+          <Price>{price}</Price>
           <Name>{name}</Name>
         </Label>
       </PageLink>

@@ -5,12 +5,12 @@ import { Link } from "wouter-preact"
 const linkStyles = `
   height: 30px;
   line-height: 30px;
-  color: var(--lcm-purple);
   text-decoration: none;
-  transition: all .2s ease-in-out;
+  transition: var(--transition-default);
   &:hover {
     text-decoration: none;
     cursor: pointer;
+    color: var(--lcm-green-new);
   }
 `
 const PrettyLink = styled(Link)<{
@@ -24,7 +24,7 @@ const PrettyLink = styled(Link)<{
   font-weight: ${(props) => (props.heavy ? "bold" : "regular")};
   font-size: ${(props) => `var(--font-${props.size})`};
   border-bottom: ${(props) =>
-    props.underline ? "2px solid var(--lcm-purple)" : "2px solid transparent"};
+    props.underline ? "2px solid var(--lcm-green-new)" : "2px solid transparent"};
 `
 
 const PrettyA = styled.a<{
@@ -38,7 +38,7 @@ const PrettyA = styled.a<{
   font-weight: ${(props) => (props.heavy ? "bold" : "regular")};
   font-size: ${(props) => `var(--font-${props.size})`};
   border-bottom: ${(props) =>
-    props.underline ? "2px solid var(--lcm-purple)" : "2px solid transparent"};
+    props.underline ? "2px solid var(--lcm-green-new)" : "2px solid transparent"};
 `
 
 interface Props {
@@ -70,6 +70,7 @@ export const PageLink: FC<Props> = ({
           size={size}
           href={to}
           underline={underline}
+          target={external ? "_blank" : ""}
         >
           {children}
         </PrettyA>
@@ -80,6 +81,7 @@ export const PageLink: FC<Props> = ({
           underline={underline}
           size={size}
           href={to}
+          target="_blank"
         >
           {text}
         </PrettyA>

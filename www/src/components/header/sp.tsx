@@ -1,8 +1,7 @@
 import styled from "styled-components"
-import logoHorizontal from "../../assets/logo_horizontal.png"
+import logoNew from "../../assets/logo_new.png"
 import { PageLink } from "../page-link"
 import { Insta } from "../icons/insta"
-import { Cart } from "../icons/cart"
 import { Link, useLocation } from "wouter-preact"
 import { useEffect, useState } from "preact/hooks"
 
@@ -14,8 +13,9 @@ const Container = styled.header<{ isOpen: boolean }>`
   display: flex;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background: var(--lcm-green);
-  transition: all 0.3s ease-in-out;
+  background: var(--lcm-purple-new);
+  transition: var(--transition-default);
+  z-index: 999;
   ${(props) => (props.isOpen ? "height: 100vh" : "height: 8rem;")}
 `
 
@@ -36,7 +36,7 @@ const Content = styled.div<{ isOpen: boolean }>`
   width: 90%;
   display: grid;
   place-items: center;
-  transition: all 0.3s ease-in-out;
+  transition: var(--transition-default);
   opacity: ${(props) => (props.isOpen ? "100%" : "0")};
 `
 
@@ -74,7 +74,7 @@ export const SpHeader = () => {
     <Container isOpen={isOpen}>
       <TopBar>
         <LogoContainer to="/">
-          <Logo src={logoHorizontal} />
+          <Logo src={logoNew} />
         </LogoContainer>
         <button onClick={() => setIsOpen(!isOpen)}>X</button>
       </TopBar>
@@ -82,7 +82,7 @@ export const SpHeader = () => {
         <NavContainer>
           <PageLink size="large" to="/shop" text="Shop" />
           <PageLink size="large" to="/about" text="About" />
-          <PageLink external to="/insta">
+          <PageLink external to="https://www.instagram.com/leclub_momo/">
             <Insta />
           </PageLink>
         </NavContainer>

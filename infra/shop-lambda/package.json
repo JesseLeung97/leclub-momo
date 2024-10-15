@@ -1,0 +1,19 @@
+{
+  "name": "shop-lambda",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Lambda for connecting to suzuri",
+  "main": "src/index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "npm run zip && npm run update-lambda-code",
+    "zip": "cd src && zip -r ../../shop-lambda.zip *",
+    "update-lambda-code": "aws lambda update-function-code --region us-east-1 --function-name Suzuri-shop-lambda --zip-file fileb://../shop-lambda.zip"
+
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}

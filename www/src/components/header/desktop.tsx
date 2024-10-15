@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import logoHorizontal from "../../assets/logo_horizontal.png"
+import logoNew from "../../assets/logo_new.png"
 import { PageLink } from "../page-link"
 import { Insta } from "../icons/insta"
 import { Link, useRoute } from "wouter-preact"
@@ -31,12 +31,12 @@ export const DesktopHeader = () => {
   return (
     <Container>
       <LogoContainer to="/">
-        <Logo src={logoHorizontal} />
+        <Logo src={logoNew} />
       </LogoContainer>
       <NavContainer>
         <PageLink to="/shop" text="Shop" underline={matchShop} />
         <PageLink to="/about" text="About" underline={matchAbout} />
-        <PageLink external to="/insta">
+        <PageLink external to="https://www.instagram.com/leclub_momo/">
           <Insta />
         </PageLink>
       </NavContainer>
